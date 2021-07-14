@@ -1,0 +1,4 @@
+include ':contentprovider'
+include ':startup'
+include ':app'
+rootProject.name = "AppSatrtupDemo"
