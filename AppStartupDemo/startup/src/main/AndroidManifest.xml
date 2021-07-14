@@ -12,7 +12,7 @@
         android:theme="@style/Theme.AppSatrtupDemo" >
 
         <!--provider的node为merge，会将所有manifest文件里的InitializationProvider的meta-data合并到一起，保证meta-data不重复-->
-        <!--provider的一个meta-data就是一个初始化类，初始化类继承Initializer<T>，这样就实现了共享同一个ContentProvider初始化组件的目的-->
+        <!--provider的一个meta-data就是一个初始化类，初始化类实现Initializer<T>，这样就实现了共享同一个ContentProvider初始化组件的目的-->
         <!--如果初始化类有依赖的其他的Initializer<T>，会自动先初始化依赖的Initializer<T>，不需要写到meta-data里-->
         <!--初始化有两种方式：自动初始化和手动初始化。这个通过provider的meta-data的node来控制，node为remove即移除，这样这个初始化类就是手动初始化，
         如果所有初始化类都手动初始化，可以将provider的node设为remove-->
